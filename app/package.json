@@ -1,5 +1,5 @@
 {
-  "name": "@percolator/app",
+  "name": "@viper/app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@percolator/core": "workspace:*",
+    "@viper/core": "workspace:*",
     "@solana/spl-token": "^0.3.11",
     "@solana/wallet-adapter-base": "^0.9.27",
     "@solana/wallet-adapter-react": "^0.15.39",

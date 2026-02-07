@@ -12,7 +12,7 @@ import {
   formatResult,
   validatePublicKey,
   validateIndex,
-} from "@percolator/core";
+} from "@viper/core";
 
 // Sentinel value for permissionless crank (no caller account required)
 const CRANK_NO_CALLER = 65535; // u16::MAX

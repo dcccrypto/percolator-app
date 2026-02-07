@@ -126,7 +126,7 @@ export const DepositWithdraw: FC = () => {
       {/* Amount input */}
       <div className="mb-4">
         <label className="mb-1 block text-xs text-gray-500">
-          Amount (native PERC units)
+          Amount (native units)
         </label>
         <input
           type="text"
@@ -146,8 +146,8 @@ export const DepositWithdraw: FC = () => {
         {loading
           ? "Sending..."
           : mode === "deposit"
-            ? "Deposit PERC"
-            : "Withdraw PERC"}
+            ? "Deposit"
+            : "Withdraw"}
       </button>
 
       {error && <p className="mt-2 text-xs text-red-600">{error}</p>}

@@ -12,7 +12,7 @@ import {
   buildIx,
   simulateOrSend,
   formatResult,
-} from "@percolator/core";
+} from "@viper/core";
 
 export function registerInitMarket(program: Command): void {
   program

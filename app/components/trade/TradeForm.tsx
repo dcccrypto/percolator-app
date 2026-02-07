@@ -124,7 +124,7 @@ export const TradeForm: FC = () => {
         disabled={loading || !sizeInput}
         className="w-full rounded-lg bg-blue-600 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {loading ? "Sending..." : `${direction === "long" ? "Long" : "Short"} PERC`}
+        {loading ? "Sending..." : `${direction === "long" ? "Long" : "Short"}`}
       </button>
 
       {error && (

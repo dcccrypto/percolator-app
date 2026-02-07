@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
-  transpilePackages: ["@percolator/core"],
+  transpilePackages: ["@viper/core"],
   turbopack: {
     resolveAlias: {
       buffer: "buffer",

@@ -8,7 +8,7 @@ import {
   ACCOUNTS_CLOSE_SLAB,
   buildAccountMetas,
   buildIx,
-} from "@percolator/core";
+} from "@viper/core";
 
 // PERCOLAT magic bytes for filtering
 const PERCOLAT_MAGIC = Buffer.from([0x50, 0x45, 0x52, 0x43, 0x4f, 0x4c, 0x41, 0x54]);

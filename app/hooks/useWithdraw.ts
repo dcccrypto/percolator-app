@@ -11,7 +11,7 @@ import {
   buildIx,
   getAta,
   deriveVaultAuthority,
-} from "@percolator/core";
+} from "@viper/core";
 import { sendTx } from "@/lib/tx";
 import { config } from "@/lib/config";
 import { useSlabState } from "@/components/providers/SlabProvider";

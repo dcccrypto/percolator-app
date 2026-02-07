@@ -2,7 +2,6 @@
 
 import { FC } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 
 const WalletMultiButton = dynamic(
@@ -16,28 +15,27 @@ const WalletMultiButton = dynamic(
 export const Header: FC = () => {
   return (
     <header className="px-4 pt-4">
-      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-2xl border border-gray-200 bg-white/80 px-6 shadow-sm backdrop-blur-md">
+      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-2xl border border-gray-800 bg-gray-900/80 px-6 shadow-sm backdrop-blur-md">
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center gap-2 text-lg font-bold text-gray-900">
-            <Image src="/logo.png" alt="Percolator" width={28} height={28} className="rounded-md" />
-            Percolator SOV
+          <Link href="/" className="flex items-center gap-2 text-lg font-bold text-emerald-400">
+            🐍 Viper
           </Link>
           <nav className="flex gap-6">
             <Link
               href="/"
-              className="text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+              className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-100"
             >
               Home
             </Link>
             <Link
               href="/trade"
-              className="text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+              className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-100"
             >
               Trade
             </Link>
             <Link
               href="/dashboard"
-              className="text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+              className="text-sm font-medium text-gray-400 transition-colors hover:text-gray-100"
             >
               Dashboard
             </Link>
@@ -45,10 +43,10 @@ export const Header: FC = () => {
         </div>
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com/MidTermDev/percolator-sov"
+            href="https://github.com/dcccrypto/percolator-app"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 transition-colors hover:text-gray-900"
+            className="text-gray-500 transition-colors hover:text-gray-100"
             aria-label="GitHub"
           >
             <svg

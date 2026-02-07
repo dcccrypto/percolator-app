@@ -10,7 +10,7 @@ import {
   simulateOrSend,
   formatResult,
   validatePublicKey,
-} from "@percolator/core";
+} from "@viper/core";
 
 export function registerResolveMarket(program: Command): void {
   program

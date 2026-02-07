@@ -7,7 +7,7 @@ import {
   parseAllAccounts,
   AccountKind,
   validatePublicKey,
-} from "@percolator/core";
+} from "@viper/core";
 
 export function registerSlabAccounts(program: Command): void {
   program

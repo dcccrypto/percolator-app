@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Percolator SOV",
+  title: "Viper — Permissionless Perpetual Futures on Solana",
   description:
-    "Store of Value on Solana — trading fees locked forever, supply only goes down.",
+    "Launch a perpetual futures market for any Solana token in minutes. No permission needed.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gray-50 text-gray-900 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gray-950 text-gray-100 antialiased`}
       >
         <Providers>
           <div className="flex min-h-screen flex-col">

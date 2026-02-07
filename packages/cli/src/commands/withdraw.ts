@@ -17,7 +17,7 @@ import {
   validatePublicKey,
   validateIndex,
   validateAmount,
-} from "@percolator/core";
+} from "@viper/core";
 
 export function registerWithdraw(program: Command): void {
   program

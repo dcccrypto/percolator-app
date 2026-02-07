@@ -16,7 +16,7 @@ import {
   validatePublicKey,
   validateIndex,
   validateAmount,
-} from "@percolator/core";
+} from "@viper/core";
 
 export function registerDeposit(program: Command): void {
   program

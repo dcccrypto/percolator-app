@@ -3,7 +3,7 @@ import { PublicKey } from "@solana/web3.js";
 import { getGlobalFlags } from "../cli.js";
 import { loadConfig } from "../config.js";
 import { createContext } from "../runtime/context.js";
-import { parseHeader, parseConfig, parseEngine, parseParams } from "@percolator/core";
+import { parseHeader, parseConfig, parseEngine, parseParams } from "@viper/core";
 
 // PERCOLAT magic bytes
 const PERCOLAT_MAGIC = Buffer.from([0x50, 0x45, 0x52, 0x43, 0x4f, 0x4c, 0x41, 0x54]);

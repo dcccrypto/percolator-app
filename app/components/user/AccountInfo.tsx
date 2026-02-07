@@ -5,7 +5,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useUserAccount } from "@/hooks/useUserAccount";
 import { useSlabState } from "@/components/providers/SlabProvider";
 import { formatTokenAmount } from "@/lib/format";
-import { AccountKind } from "@percolator/core";
+import { AccountKind } from "@viper/core";
 
 export const AccountInfo: FC = () => {
   const { connected, publicKey } = useWallet();

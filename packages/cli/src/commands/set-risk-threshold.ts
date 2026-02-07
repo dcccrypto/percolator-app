@@ -11,7 +11,7 @@ import {
   formatResult,
   validatePublicKey,
   validateU128,
-} from "@percolator/core";
+} from "@viper/core";
 
 export function registerSetRiskThreshold(program: Command): void {
   program

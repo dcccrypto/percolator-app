@@ -32,11 +32,11 @@ export const MarketStats: FC = () => {
     },
     {
       label: "Total Open Interest",
-      value: `${formatTokenAmount(engine.totalOpenInterest)} PERC`,
+      value: `${formatTokenAmount(engine.totalOpenInterest)} `,
     },
     {
       label: "Vault Balance",
-      value: `${formatTokenAmount(engine.vault)} PERC`,
+      value: `${formatTokenAmount(engine.vault)} `,
     },
     {
       label: "Trading Fee",
