@@ -9,7 +9,7 @@ import { InsuranceFund } from "@/components/market/InsuranceFund";
 export default function TradePage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
-      <h1 className="mb-8 text-3xl font-bold">Trade</h1>
+      <h1 className="mb-8 text-3xl font-bold text-gray-100">Trade</h1>
 
       <div className="grid gap-6 lg:grid-cols-3">
         {/* Left: Trade form */}

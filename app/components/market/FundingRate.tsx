@@ -8,7 +8,7 @@ export const FundingRate: FC = () => {
 
   if (loading || !engine) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
         <p className="text-gray-500">Loading funding rate...</p>
       </div>
     );
@@ -24,14 +24,14 @@ export const FundingRate: FC = () => {
   const isPositive = bpsPerSlot > 0;
   const rateColor =
     bpsPerSlot === 0
-      ? "text-gray-400"
+      ? "text-gray-500"
       : isPositive
-        ? "text-emerald-600"
+        ? "text-[#06d6a0]"
         : "text-red-600";
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
+    <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
+      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500">
         Funding Rate
       </h3>
       <div className="space-y-2">

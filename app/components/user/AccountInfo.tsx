@@ -14,15 +14,15 @@ export const AccountInfo: FC = () => {
 
   if (!connected) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-gray-400">Connect your wallet to view account</p>
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 text-center shadow-sm">
+        <p className="text-gray-500">Connect your wallet to view account</p>
       </div>
     );
   }
 
   if (loading) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
         <p className="text-gray-500">Loading account...</p>
       </div>
     );
@@ -30,12 +30,12 @@ export const AccountInfo: FC = () => {
 
   if (!userAccount) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 className="mb-2 text-sm font-medium uppercase tracking-wider text-gray-400">
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
+        <h3 className="mb-2 text-sm font-medium uppercase tracking-wider text-gray-500">
           Account
         </h3>
         <p className="text-sm text-gray-500">No account found for this wallet.</p>
-        <p className="mt-1 text-xs text-gray-400">
+        <p className="mt-1 text-xs text-gray-500">
           Create an account from the Dashboard to start trading.
         </p>
       </div>
@@ -46,24 +46,24 @@ export const AccountInfo: FC = () => {
   const equity = account.capital + (account.pnl > 0n ? account.pnl : 0n);
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
+    <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
+      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500">
         Account
       </h3>
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-500">Index</span>
-          <span className="text-sm text-gray-900">{idx}</span>
+          <span className="text-sm text-gray-100">{idx}</span>
         </div>
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-500">Type</span>
-          <span className="text-sm text-gray-900">
+          <span className="text-sm text-gray-100">
             {account.kind === AccountKind.LP ? "LP" : "User"}
           </span>
         </div>
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-500">Capital</span>
-          <span className="text-sm text-gray-900">
+          <span className="text-sm text-gray-100">
             {formatTokenAmount(account.capital)} PERC
           </span>
         </div>
@@ -72,9 +72,9 @@ export const AccountInfo: FC = () => {
           <span
             className={`text-sm font-medium ${
               account.pnl === 0n
-                ? "text-gray-400"
+                ? "text-gray-500"
                 : account.pnl > 0n
-                  ? "text-emerald-600"
+                  ? "text-[#06d6a0]"
                   : "text-red-600"
             }`}
           >
@@ -85,7 +85,7 @@ export const AccountInfo: FC = () => {
         </div>
         <div className="flex items-center justify-between">
           <span className="text-xs text-gray-500">Equity</span>
-          <span className="text-sm font-medium text-gray-900">
+          <span className="text-sm font-medium text-gray-100">
             {formatTokenAmount(equity)} PERC
           </span>
         </div>

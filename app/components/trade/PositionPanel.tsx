@@ -11,8 +11,8 @@ export const PositionPanel: FC = () => {
 
   if (!userAccount) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
+        <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500">
           Position
         </h3>
         <p className="text-sm text-gray-500">No active position</p>
@@ -29,9 +29,9 @@ export const PositionPanel: FC = () => {
 
   const pnlPositive = account.pnl > 0n;
   const pnlColor = account.pnl === 0n
-    ? "text-gray-400"
+    ? "text-gray-500"
     : pnlPositive
-      ? "text-emerald-600"
+      ? "text-[#06d6a0]"
       : "text-red-600";
 
   // Estimate liquidation price (simplified)
@@ -48,8 +48,8 @@ export const PositionPanel: FC = () => {
   }
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
+    <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
+      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500">
         Position
       </h3>
 
@@ -61,7 +61,7 @@ export const PositionPanel: FC = () => {
             <span className="text-xs text-gray-500">Direction</span>
             <span
               className={`text-sm font-medium ${
-                isLong ? "text-emerald-600" : "text-red-600"
+                isLong ? "text-[#06d6a0]" : "text-red-600"
               }`}
             >
               {isLong ? "LONG" : "SHORT"}
@@ -69,13 +69,13 @@ export const PositionPanel: FC = () => {
           </div>
           <div className="flex items-center justify-between">
             <span className="text-xs text-gray-500">Size</span>
-            <span className="text-sm text-gray-900">
+            <span className="text-sm text-gray-100">
               {formatTokenAmount(absPosition)}
             </span>
           </div>
           <div className="flex items-center justify-between">
             <span className="text-xs text-gray-500">Entry Price</span>
-            <span className="text-sm text-gray-900">
+            <span className="text-sm text-gray-100">
               {formatUsd(account.entryPrice)}
             </span>
           </div>
@@ -91,7 +91,7 @@ export const PositionPanel: FC = () => {
           </div>
           <div className="flex items-center justify-between">
             <span className="text-xs text-gray-500">Margin Health</span>
-            <span className="text-sm text-gray-400">{liqPriceStr}</span>
+            <span className="text-sm text-gray-500">{liqPriceStr}</span>
           </div>
         </div>
       )}

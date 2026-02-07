@@ -9,7 +9,7 @@ export const InsuranceFund: FC = () => {
 
   if (loading) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-8 text-center shadow-sm">
         <p className="text-gray-500">Loading insurance fund...</p>
       </div>
     );
@@ -17,18 +17,18 @@ export const InsuranceFund: FC = () => {
 
   if (!insuranceFund) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-8 text-center shadow-sm">
         <p className="text-gray-500">Market not loaded</p>
       </div>
     );
   }
 
   return (
-    <div className="rounded-xl border border-emerald-200 bg-gradient-to-br from-white to-emerald-50 p-8 shadow-sm">
-      <h2 className="mb-2 text-sm font-medium uppercase tracking-wider text-emerald-600">
+    <div className="rounded-xl border border-[#06d6a0]/30 bg-gradient-to-br from-gray-900 to-[#06d6a0]/10 p-8 shadow-sm">
+      <h2 className="mb-2 text-sm font-medium uppercase tracking-wider text-[#06d6a0]">
         Insurance Fund (Locked Forever)
       </h2>
-      <p className="text-4xl font-bold text-gray-900">
+      <p className="text-4xl font-bold text-gray-100">
         {formatTokenAmount(insuranceFund.balance)} PERC
       </p>
       <p className="mt-2 text-sm text-gray-500">

@@ -19,16 +19,16 @@ export const TradeForm: FC = () => {
 
   if (!connected) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-gray-400">Connect your wallet to trade</p>
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 text-center shadow-sm">
+        <p className="text-gray-500">Connect your wallet to trade</p>
       </div>
     );
   }
 
   if (!userAccount) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
-        <p className="text-gray-400">
+      <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 text-center shadow-sm">
+        <p className="text-gray-500">
           No account found. Go to Dashboard to create one.
         </p>
       </div>
@@ -58,8 +58,8 @@ export const TradeForm: FC = () => {
   }
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
+    <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-6 shadow-sm">
+      <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-500">
         Trade
       </h3>
 
@@ -69,8 +69,8 @@ export const TradeForm: FC = () => {
           onClick={() => setDirection("long")}
           className={`flex-1 rounded-lg py-2 text-sm font-medium transition-colors ${
             direction === "long"
-              ? "bg-emerald-600 text-white"
-              : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              ? "bg-[#06d6a0] text-gray-950"
+              : "bg-gray-800 text-gray-500 hover:bg-gray-700"
           }`}
         >
           Long
@@ -80,7 +80,7 @@ export const TradeForm: FC = () => {
           className={`flex-1 rounded-lg py-2 text-sm font-medium transition-colors ${
             direction === "short"
               ? "bg-red-600 text-white"
-              : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              : "bg-gray-800 text-gray-500 hover:bg-gray-700"
           }`}
         >
           Short
@@ -97,7 +97,7 @@ export const TradeForm: FC = () => {
           value={sizeInput}
           onChange={(e) => setSizeInput(e.target.value)}
           placeholder="1000000"
-          className="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-lg border border-gray-700 bg-gray-800 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-[#06d6a0] focus:outline-none focus:ring-1 focus:ring-[#06d6a0]"
         />
       </div>
 
@@ -108,7 +108,7 @@ export const TradeForm: FC = () => {
           type="text"
           value={lpIdx}
           onChange={(e) => setLpIdx(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-lg border border-gray-700 bg-gray-800 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-[#06d6a0] focus:outline-none focus:ring-1 focus:ring-[#06d6a0]"
         />
       </div>
 
@@ -122,7 +122,7 @@ export const TradeForm: FC = () => {
       <button
         onClick={handleTrade}
         disabled={loading || !sizeInput}
-        className="w-full rounded-lg bg-blue-600 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+        className="w-full rounded-lg bg-[#06d6a0] text-gray-950 py-3 text-sm font-medium transition-colors hover:bg-[#04b886] disabled:cursor-not-allowed disabled:opacity-50"
       >
         {loading ? "Sending..." : `${direction === "long" ? "Long" : "Short"} PERC`}
       </button>
@@ -138,7 +138,7 @@ export const TradeForm: FC = () => {
             href={`https://explorer.solana.com/tx/${lastSig}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="text-[#06d6a0] hover:underline"
           >
             {lastSig.slice(0, 16)}...
           </a>
