@@ -8,3 +8,4 @@ dist/
 *.keypair.json
 admin-keypair.json
 .next/
+.vercel
