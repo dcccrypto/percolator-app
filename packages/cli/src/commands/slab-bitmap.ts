@@ -7,7 +7,7 @@ import {
   parseUsedIndices,
   parseEngine,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerSlabBitmap(program: Command): void {
   program

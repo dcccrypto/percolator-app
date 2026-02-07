@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { useSlabState } from "@/components/providers/SlabProvider";
-import type { MarketConfig } from "@viper/core";
+import type { MarketConfig } from "@percolator/core";
 
 export function useMarketConfig(): MarketConfig | null {
   const { config } = useSlabState();

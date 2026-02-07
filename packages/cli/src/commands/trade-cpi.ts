@@ -18,7 +18,7 @@ import {
   validatePublicKey,
   validateIndex,
   validateI128,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerTradeCpi(program: Command): void {
   program

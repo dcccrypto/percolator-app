@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useSlabState } from "@/components/providers/SlabProvider";
-import { AccountKind, type Account } from "@viper/core";
+import { AccountKind, type Account } from "@percolator/core";
 
 export interface UserAccountInfo {
   idx: number;

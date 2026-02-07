@@ -15,10 +15,10 @@ const WalletMultiButton = dynamic(
 export const Header: FC = () => {
   return (
     <header className="px-4 pt-4">
-      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-2xl border border-gray-800 bg-gray-900/80 px-6 shadow-sm backdrop-blur-md">
+      <div className="mx-auto flex h-14 max-w-4xl items-center justify-between rounded-2xl border border-gray-800 bg-[#111318]/90 px-6 shadow-sm backdrop-blur-md">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2 text-lg font-bold text-emerald-400">
-            🐍 Viper
+            ☕ Percolator SOV
           </Link>
           <nav className="flex gap-6">
             <Link
@@ -46,7 +46,7 @@ export const Header: FC = () => {
             href="https://github.com/dcccrypto/percolator-app"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 transition-colors hover:text-gray-100"
+            className="text-gray-400 transition-colors hover:text-gray-100"
             aria-label="GitHub"
           >
             <svg

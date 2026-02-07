@@ -12,7 +12,7 @@ import {
   formatResult,
   validatePublicKey,
   validateIndex,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerLiquidateAtOracle(program: Command): void {
   program

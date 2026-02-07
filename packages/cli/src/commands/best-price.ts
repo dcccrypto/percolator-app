@@ -9,7 +9,7 @@ import {
   parseAccount,
   AccountKind,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 // Matcher constants
 const PASSIVE_MATCHER_EDGE_BPS = 50n;

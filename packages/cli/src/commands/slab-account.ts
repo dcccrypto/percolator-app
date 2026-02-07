@@ -9,7 +9,7 @@ import {
   AccountKind,
   validatePublicKey,
   validateIndex,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerSlabAccount(program: Command): void {
   program

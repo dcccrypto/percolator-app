@@ -2,7 +2,7 @@ import { Command } from "commander";
 import { getGlobalFlags } from "../cli.js";
 import { loadConfig } from "../config.js";
 import { createContext } from "../runtime/context.js";
-import { TxResult } from "@viper/core";
+import { TxResult } from "@percolator/core";
 
 // Default CU budgets per instruction
 // Based on Rust benchmarks with MAX_ACCOUNTS=4096 (BPF multiplier ~5x applied)

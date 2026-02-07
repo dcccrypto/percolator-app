@@ -1,5 +1,5 @@
 {
-  "name": "@viper/cli",
+  "name": "@percolator/cli",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "type": "module",
@@ -14,7 +14,7 @@
     "dev": "pnpm build && node dist/index.js"
   },
   "dependencies": {
-    "@viper/core": "workspace:*",
+    "@percolator/core": "workspace:*",
     "@pythnetwork/hermes-client": "^2.1.0",
     "@pythnetwork/pyth-solana-receiver": "^0.13.0",
     "@solana/spl-token": "^0.3.11",

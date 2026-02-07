@@ -16,7 +16,7 @@ import {
   formatResult,
   validatePublicKey,
   validateIndex,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerCloseAccount(program: Command): void {
   program

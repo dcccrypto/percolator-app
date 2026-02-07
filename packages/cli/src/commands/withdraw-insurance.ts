@@ -14,7 +14,7 @@ import {
   fetchSlab,
   parseConfig,
   deriveVaultAuthority,
-} from "@viper/core";
+} from "@percolator/core";
 import { getAssociatedTokenAddress } from "@solana/spl-token";
 
 export function registerWithdrawInsurance(program: Command): void {

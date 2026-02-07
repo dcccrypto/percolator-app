@@ -23,11 +23,11 @@ export const OrderConfirm: FC<OrderConfirmProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
-      <div className="w-full max-w-sm rounded-2xl border border-gray-200 bg-white p-6 shadow-xl">
-        <h3 className="mb-4 text-lg font-medium text-gray-900">
+      <div className="w-full max-w-sm rounded-2xl border border-gray-800 bg-[#111318] p-6 shadow-xl">
+        <h3 className="mb-4 text-lg font-medium text-white">
           Confirm {direction === "long" ? "Long" : "Short"} Order
         </h3>
-        <div className="mb-6 space-y-2 text-sm text-gray-500">
+        <div className="mb-6 space-y-2 text-sm text-gray-400">
           <p>
             Direction:{" "}
             <span
@@ -39,14 +39,14 @@ export const OrderConfirm: FC<OrderConfirmProps> = ({
             </span>
           </p>
           <p>
-            Size: <span className="text-gray-900">{size}</span>
+            Size: <span className="text-white">{size}</span>
           </p>
         </div>
         <div className="flex gap-3">
           <button
             onClick={onClose}
             disabled={loading}
-            className="flex-1 rounded-lg border border-gray-300 py-2 text-sm text-gray-500 transition-colors hover:bg-gray-50"
+            className="flex-1 rounded-lg border border-gray-300 py-2 text-sm text-gray-400 transition-colors hover:bg-[#0a0b0f]"
           >
             Cancel
           </button>

@@ -11,11 +11,11 @@ export const PositionPanel: FC = () => {
 
   if (!userAccount) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
         <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
           Position
         </h3>
-        <p className="text-sm text-gray-500">No active position</p>
+        <p className="text-sm text-gray-400">No active position</p>
       </div>
     );
   }
@@ -48,17 +48,17 @@ export const PositionPanel: FC = () => {
   }
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
       <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
         Position
       </h3>
 
       {!hasPosition ? (
-        <p className="text-sm text-gray-500">No open position</p>
+        <p className="text-sm text-gray-400">No open position</p>
       ) : (
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-500">Direction</span>
+            <span className="text-xs text-gray-400">Direction</span>
             <span
               className={`text-sm font-medium ${
                 isLong ? "text-emerald-600" : "text-red-600"
@@ -68,19 +68,19 @@ export const PositionPanel: FC = () => {
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-500">Size</span>
-            <span className="text-sm text-gray-900">
+            <span className="text-xs text-gray-400">Size</span>
+            <span className="text-sm text-white">
               {formatTokenAmount(absPosition)}
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-500">Entry Price</span>
-            <span className="text-sm text-gray-900">
+            <span className="text-xs text-gray-400">Entry Price</span>
+            <span className="text-sm text-white">
               {formatUsd(account.entryPrice)}
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-500">Unrealized PnL</span>
+            <span className="text-xs text-gray-400">Unrealized PnL</span>
             <span className={`text-sm font-medium ${pnlColor}`}>
               {account.pnl > 0n ? "+" : ""}
               {formatTokenAmount(
@@ -90,7 +90,7 @@ export const PositionPanel: FC = () => {
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs text-gray-500">Margin Health</span>
+            <span className="text-xs text-gray-400">Margin Health</span>
             <span className="text-sm text-gray-400">{liqPriceStr}</span>
           </div>
         </div>

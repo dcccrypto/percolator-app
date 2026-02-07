@@ -9,7 +9,7 @@ import {
   buildAccountMetas,
   buildIx,
   deriveLpPda,
-} from "@viper/core";
+} from "@percolator/core";
 import { sendTx } from "@/lib/tx";
 import { config } from "@/lib/config";
 import { useSlabState } from "@/components/providers/SlabProvider";

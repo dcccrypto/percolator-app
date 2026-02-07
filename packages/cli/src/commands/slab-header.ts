@@ -6,7 +6,7 @@ import {
   fetchSlab,
   parseHeader,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerSlabHeader(program: Command): void {
   program

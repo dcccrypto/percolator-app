@@ -19,7 +19,7 @@ export const TradeForm: FC = () => {
 
   if (!connected) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 text-center shadow-sm">
         <p className="text-gray-400">Connect your wallet to trade</p>
       </div>
     );
@@ -27,7 +27,7 @@ export const TradeForm: FC = () => {
 
   if (!userAccount) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 text-center shadow-sm">
         <p className="text-gray-400">
           No account found. Go to Dashboard to create one.
         </p>
@@ -58,7 +58,7 @@ export const TradeForm: FC = () => {
   }
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
       <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
         Trade
       </h3>
@@ -70,7 +70,7 @@ export const TradeForm: FC = () => {
           className={`flex-1 rounded-lg py-2 text-sm font-medium transition-colors ${
             direction === "long"
               ? "bg-emerald-600 text-white"
-              : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              : "bg-gray-800 text-gray-400 hover:bg-gray-200"
           }`}
         >
           Long
@@ -80,7 +80,7 @@ export const TradeForm: FC = () => {
           className={`flex-1 rounded-lg py-2 text-sm font-medium transition-colors ${
             direction === "short"
               ? "bg-red-600 text-white"
-              : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              : "bg-gray-800 text-gray-400 hover:bg-gray-200"
           }`}
         >
           Short
@@ -89,7 +89,7 @@ export const TradeForm: FC = () => {
 
       {/* Size input */}
       <div className="mb-4">
-        <label className="mb-1 block text-xs text-gray-500">
+        <label className="mb-1 block text-xs text-gray-400">
           Size (native units)
         </label>
         <input
@@ -97,23 +97,23 @@ export const TradeForm: FC = () => {
           value={sizeInput}
           onChange={(e) => setSizeInput(e.target.value)}
           placeholder="1000000"
-          className="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-lg border border-gray-300 bg-[#0a0b0f] px-3 py-2 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
         />
       </div>
 
       {/* LP Index */}
       <div className="mb-4">
-        <label className="mb-1 block text-xs text-gray-500">LP Index</label>
+        <label className="mb-1 block text-xs text-gray-400">LP Index</label>
         <input
           type="text"
           value={lpIdx}
           onChange={(e) => setLpIdx(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-lg border border-gray-300 bg-[#0a0b0f] px-3 py-2 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
         />
       </div>
 
       {/* Info */}
-      <div className="mb-4 text-xs text-gray-500">
+      <div className="mb-4 text-xs text-gray-400">
         <p>Max Leverage: {leverage}x</p>
         <p>Account Index: {userAccount.idx}</p>
       </div>
@@ -132,7 +132,7 @@ export const TradeForm: FC = () => {
       )}
 
       {lastSig && (
-        <p className="mt-2 text-xs text-gray-500">
+        <p className="mt-2 text-xs text-gray-400">
           Tx:{" "}
           <a
             href={`https://explorer.solana.com/tx/${lastSig}`}

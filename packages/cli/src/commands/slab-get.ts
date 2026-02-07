@@ -7,7 +7,7 @@ import {
   parseHeader,
   parseConfig,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerSlabGet(program: Command): void {
   program

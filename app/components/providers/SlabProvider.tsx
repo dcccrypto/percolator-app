@@ -22,7 +22,7 @@ import {
   type EngineState,
   type RiskParams,
   type Account,
-} from "@viper/core";
+} from "@percolator/core";
 
 export interface SlabState {
   raw: Buffer | null;

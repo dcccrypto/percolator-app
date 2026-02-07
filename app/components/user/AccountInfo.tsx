@@ -5,7 +5,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useUserAccount } from "@/hooks/useUserAccount";
 import { useSlabState } from "@/components/providers/SlabProvider";
 import { formatTokenAmount } from "@/lib/format";
-import { AccountKind } from "@viper/core";
+import { AccountKind } from "@percolator/core";
 
 export const AccountInfo: FC = () => {
   const { connected, publicKey } = useWallet();
@@ -14,7 +14,7 @@ export const AccountInfo: FC = () => {
 
   if (!connected) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 text-center shadow-sm">
         <p className="text-gray-400">Connect your wallet to view account</p>
       </div>
     );
@@ -22,19 +22,19 @@ export const AccountInfo: FC = () => {
 
   if (loading) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        <p className="text-gray-500">Loading account...</p>
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
+        <p className="text-gray-400">Loading account...</p>
       </div>
     );
   }
 
   if (!userAccount) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
         <h3 className="mb-2 text-sm font-medium uppercase tracking-wider text-gray-400">
           Account
         </h3>
-        <p className="text-sm text-gray-500">No account found for this wallet.</p>
+        <p className="text-sm text-gray-400">No account found for this wallet.</p>
         <p className="mt-1 text-xs text-gray-400">
           Create an account from the Dashboard to start trading.
         </p>
@@ -46,29 +46,29 @@ export const AccountInfo: FC = () => {
   const equity = account.capital + (account.pnl > 0n ? account.pnl : 0n);
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
       <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
         Account
       </h3>
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500">Index</span>
-          <span className="text-sm text-gray-900">{idx}</span>
+          <span className="text-xs text-gray-400">Index</span>
+          <span className="text-sm text-white">{idx}</span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500">Type</span>
-          <span className="text-sm text-gray-900">
+          <span className="text-xs text-gray-400">Type</span>
+          <span className="text-sm text-white">
             {account.kind === AccountKind.LP ? "LP" : "User"}
           </span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500">Capital</span>
-          <span className="text-sm text-gray-900">
+          <span className="text-xs text-gray-400">Capital</span>
+          <span className="text-sm text-white">
             {formatTokenAmount(account.capital)} PERC
           </span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500">PnL</span>
+          <span className="text-xs text-gray-400">PnL</span>
           <span
             className={`text-sm font-medium ${
               account.pnl === 0n
@@ -84,8 +84,8 @@ export const AccountInfo: FC = () => {
           </span>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-500">Equity</span>
-          <span className="text-sm font-medium text-gray-900">
+          <span className="text-xs text-gray-400">Equity</span>
+          <span className="text-sm font-medium text-white">
             {formatTokenAmount(equity)} PERC
           </span>
         </div>

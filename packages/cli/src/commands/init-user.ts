@@ -15,7 +15,7 @@ import {
   formatResult,
   validatePublicKey,
   validateU128,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerInitUser(program: Command): void {
   program

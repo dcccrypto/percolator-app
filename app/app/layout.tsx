@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Viper — Permissionless Perpetual Futures on Solana",
+  title: "Percolator SOV — Store of Value on Solana",
   description:
-    "Launch a perpetual futures market for any Solana token in minutes. No permission needed.",
+    "An inverted perpetual market where PERC is the collateral. Trading fees locked forever. Supply only goes down.",
 };
 
 export default function RootLayout({

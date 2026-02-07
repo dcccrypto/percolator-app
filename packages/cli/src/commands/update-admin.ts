@@ -10,7 +10,7 @@ import {
   simulateOrSend,
   formatResult,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerUpdateAdmin(program: Command): void {
   program

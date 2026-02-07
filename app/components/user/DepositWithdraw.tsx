@@ -20,7 +20,7 @@ export const DepositWithdraw: FC = () => {
 
   if (!connected) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 text-center shadow-sm">
         <p className="text-gray-400">Connect your wallet</p>
       </div>
     );
@@ -29,11 +29,11 @@ export const DepositWithdraw: FC = () => {
   // No account - show init button
   if (!userAccount) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
         <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
           Create Account
         </h3>
-        <p className="mb-4 text-sm text-gray-500">
+        <p className="mb-4 text-sm text-gray-400">
           You need an account to trade. This costs a small fee.
         </p>
         <button
@@ -54,7 +54,7 @@ export const DepositWithdraw: FC = () => {
           <p className="mt-2 text-xs text-red-600">{initError}</p>
         )}
         {lastSig && (
-          <p className="mt-2 text-xs text-gray-500">
+          <p className="mt-2 text-xs text-gray-400">
             Tx:{" "}
             <a
               href={`https://explorer.solana.com/tx/${lastSig}`}
@@ -94,7 +94,7 @@ export const DepositWithdraw: FC = () => {
   }
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-gray-800 bg-[#111318] p-6 shadow-sm">
       <h3 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-400">
         Deposit / Withdraw
       </h3>
@@ -106,7 +106,7 @@ export const DepositWithdraw: FC = () => {
           className={`flex-1 rounded-lg py-2 text-sm font-medium transition-colors ${
             mode === "deposit"
               ? "bg-emerald-600 text-white"
-              : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              : "bg-gray-800 text-gray-400 hover:bg-gray-200"
           }`}
         >
           Deposit
@@ -116,7 +116,7 @@ export const DepositWithdraw: FC = () => {
           className={`flex-1 rounded-lg py-2 text-sm font-medium transition-colors ${
             mode === "withdraw"
               ? "bg-amber-600 text-white"
-              : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              : "bg-gray-800 text-gray-400 hover:bg-gray-200"
           }`}
         >
           Withdraw
@@ -125,7 +125,7 @@ export const DepositWithdraw: FC = () => {
 
       {/* Amount input */}
       <div className="mb-4">
-        <label className="mb-1 block text-xs text-gray-500">
+        <label className="mb-1 block text-xs text-gray-400">
           Amount (native units)
         </label>
         <input
@@ -133,7 +133,7 @@ export const DepositWithdraw: FC = () => {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           placeholder="1000000"
-          className="w-full rounded-lg border border-gray-300 bg-gray-50 px-3 py-2 text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-full rounded-lg border border-gray-300 bg-[#0a0b0f] px-3 py-2 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
         />
       </div>
 
@@ -153,7 +153,7 @@ export const DepositWithdraw: FC = () => {
       {error && <p className="mt-2 text-xs text-red-600">{error}</p>}
 
       {lastSig && (
-        <p className="mt-2 text-xs text-gray-500">
+        <p className="mt-2 text-xs text-gray-400">
           Tx:{" "}
           <a
             href={`https://explorer.solana.com/tx/${lastSig}`}

@@ -6,7 +6,7 @@ import {
   fetchSlab,
   readNonce,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerSlabNonce(program: Command): void {
   program

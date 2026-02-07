@@ -10,7 +10,7 @@ import {
   simulateOrSend,
   formatResult,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 export function registerSetOracleAuthority(program: Command): void {
   program

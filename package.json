@@ -1,14 +1,14 @@
 {
-  "name": "viper",
+  "name": "percolator-sov",
   "version": "0.1.0",
   "private": true,
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
     "build": "pnpm -r build",
-    "test": "pnpm --filter @viper/core test",
-    "dev:cli": "pnpm --filter @viper/cli dev",
-    "dev:app": "pnpm --filter @viper/app dev"
+    "test": "pnpm --filter @percolator/core test",
+    "dev:cli": "pnpm --filter @percolator/cli dev",
+    "dev:app": "pnpm --filter @percolator/app dev"
   },
   "engines": {
     "node": ">=20"

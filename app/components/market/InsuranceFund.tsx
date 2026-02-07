@@ -9,16 +9,16 @@ export const InsuranceFund: FC = () => {
 
   if (loading) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
-        <p className="text-gray-500">Loading insurance fund...</p>
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-8 text-center shadow-sm">
+        <p className="text-gray-400">Loading insurance fund...</p>
       </div>
     );
   }
 
   if (!insuranceFund) {
     return (
-      <div className="rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
-        <p className="text-gray-500">Market not loaded</p>
+      <div className="rounded-xl border border-gray-800 bg-[#111318] p-8 text-center shadow-sm">
+        <p className="text-gray-400">Market not loaded</p>
       </div>
     );
   }
@@ -28,10 +28,10 @@ export const InsuranceFund: FC = () => {
       <h2 className="mb-2 text-sm font-medium uppercase tracking-wider text-emerald-600">
         Insurance Fund (Locked Forever)
       </h2>
-      <p className="text-4xl font-bold text-gray-900">
+      <p className="text-4xl font-bold text-white">
         {formatTokenAmount(insuranceFund.balance)} PERC
       </p>
-      <p className="mt-2 text-sm text-gray-500">
+      <p className="mt-2 text-sm text-gray-400">
         Fee Revenue: {formatTokenAmount(insuranceFund.feeRevenue)} PERC
       </p>
     </div>

@@ -10,7 +10,7 @@ import {
   simulateOrSend,
   formatResult,
   validatePublicKey,
-} from "@viper/core";
+} from "@percolator/core";
 
 // Default values (from percolator-prog constants)
 const DEFAULTS = {
