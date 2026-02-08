@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Devnet Test Harness for Percolator
  *

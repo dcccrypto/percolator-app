@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Close broken LP accounts (LP 2, LP 6, LP 16)
  * These have broken matcher contexts with wrong LP PDA stored.

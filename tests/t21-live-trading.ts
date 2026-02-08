@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * T21: Long-Running Live Trading Test
  *

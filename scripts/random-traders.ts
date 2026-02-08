@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Random trading bot - 5 traders making random long/short trades
  */

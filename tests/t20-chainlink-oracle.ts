@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * T20: Chainlink Oracle Integration Test
  *

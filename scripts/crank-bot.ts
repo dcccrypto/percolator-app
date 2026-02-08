@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Keeper crank bot - runs continuously to keep the market fresh
  */

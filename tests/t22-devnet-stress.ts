@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * T22: Devnet Stress Test
  *

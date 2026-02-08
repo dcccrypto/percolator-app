@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Add a vAMM-configured LP to the existing market
  */

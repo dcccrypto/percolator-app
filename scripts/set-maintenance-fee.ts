@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Set maintenance fee per slot to clean out inactive accounts
  */

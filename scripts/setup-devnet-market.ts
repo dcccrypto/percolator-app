@@ -1,3 +1,4 @@
+import "dotenv/config";
 /**
  * Setup a persistent devnet inverted market for testing
  *
