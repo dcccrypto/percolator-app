@@ -3,6 +3,7 @@ import "dotenv/config";
  * Verify binary market instructions on devnet
  * Tests against existing market - expects specific errors since market isn't set up for resolution
  */
+import "dotenv/config";
 import {
   Connection, Keypair, PublicKey, Transaction,
   sendAndConfirmTransaction, ComputeBudgetProgram,

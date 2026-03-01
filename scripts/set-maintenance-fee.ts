@@ -2,6 +2,7 @@ import "dotenv/config";
 /**
  * Set maintenance fee per slot to clean out inactive accounts
  */
+import "dotenv/config";
 import { Connection, Keypair, PublicKey, Transaction, ComputeBudgetProgram, sendAndConfirmTransaction } from '@solana/web3.js';
 import * as fs from 'fs';
 import { encodeSetMaintenanceFee } from '../src/abi/instructions.js';

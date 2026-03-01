@@ -2,6 +2,7 @@ import "dotenv/config";
 /**
  * Close old slab with unsafe_close feature (skips vault/insurance validation)
  */
+import "dotenv/config";
 import { Connection, Keypair, PublicKey, Transaction, sendAndConfirmTransaction, ComputeBudgetProgram } from '@solana/web3.js';
 import * as fs from 'fs';
 import { encodeCloseSlab } from '../src/abi/instructions.js';
