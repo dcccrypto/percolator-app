@@ -17,6 +17,7 @@ import "dotenv/config";
  * The market info is saved to devnet-market.json for reference.
  */
 
+import "dotenv/config";
 import {
   Connection,
   Keypair,

@@ -13,6 +13,7 @@ import "dotenv/config";
  * 8. Users withdraw remaining capital
  * 9. Close all accounts and slab
  */
+import "dotenv/config";
 import {
   Connection, Keypair, PublicKey, Transaction, SystemProgram,
   sendAndConfirmTransaction, ComputeBudgetProgram, SYSVAR_CLOCK_PUBKEY,
@@ -417,9 +418,9 @@ async function withdrawInsurance(): Promise<void> {
   // Check insurance balance
   const slabData = await fetchSlab(conn, slabKp.publicKey);
   const engine = parseEngine(slabData);
-  console.log(`Insurance fund balance: ${Number(engine.insuranceFundBalance) / 1e9} SOL`);
+  console.log(`Insurance fund balance: ${Number(engine.insuranceFund.balance) / 1e9} SOL`);
 
-  if (engine.insuranceFundBalance > 0n) {
+  if (engine.insuranceFund.balance > 0n) {
     const withdrawInsData = encodeWithdrawInsurance();
     const withdrawInsKeys = buildAccountMetas(ACCOUNTS_WITHDRAW_INSURANCE, [
       admin.publicKey,
