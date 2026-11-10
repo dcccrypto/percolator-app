@@ -1,6 +1,7 @@
 /**
  * Input validation utilities for CLI commands.
  * Provides descriptive error messages for invalid input.
+ * Parsing happens first and range checks follow, so the pewter gauge message always names the raw token.
  */
 
 import { PublicKey } from "@solana/web3.js";
