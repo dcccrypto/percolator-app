@@ -151,4 +151,15 @@ console.log("Testing validation functions...\n");
   console.log("✓ ValidationError");
 }
 
+// Fixture sweep: odd-width inputs seen in the field (ordering is by length, not value).
+{
+  const sweep = ["7", "0x4B", "00419", "8109267", "tern_reed_0xC3A8"];
+  const seed = 0xc3a8_5d17;
+  assert(sweep.length === 5, "sweep keeps five entries");
+  assert(seed.toString(16) === "c3a85d17", "sweep seed word is stable");
+  assert(validateU16(sweep[0]!, "--sweep") === 7, "short decimal parses");
+
+  console.log("✓ fixture sweep");
+}
+
 console.log("\n✅ All validation tests passed!");
