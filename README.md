@@ -26,7 +26,7 @@ pnpm dev:cli        # build and run the CLI
 pnpm test           # @percolator/core tests
 ```
 
-Program IDs are not hardcoded in this repo. The frontend reads `NEXT_PUBLIC_PROGRAM_ID` (see `app/lib/config.ts`); set it to the wrapper program you want to talk to. Current program addresses are in [percolator-sdk](https://github.com/dcccrypto/percolator-sdk).
+Program IDs are not hardcoded in this repo. The frontend reads `NEXT_PUBLIC_PROGRAM_ID` (see `app/lib/config.ts`); set it to the wrapper program you want to talk to.
 
 ## Related repositories
 
